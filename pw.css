@@ -1,0 +1,43 @@
+#gallery { width: 100%; border: 0; max-width: 900px; //width: expression(document.body.clientWidth>1200?"900px":"100%"); }
+#gallery td { border: none; background: none; padding: 0 0 40px 0; }
+#gallery td a { clear: both; margin: 0; }
+#gallery td a.img { text-decoration: none; display: block; position: relative; }
+#gallery td a.img img { //border: #ddd 1px solid; -moz-box-shadow: 0 1px 2px #666; -webkit-box-shadow: 0 1px 2px #666; box-shadow: 0 1px 2px #666; }
+#gallery .pw-already { margin-bottom: 5px;  float: left; color: green; font-size: 14px; clear: both; }
+#gallery .pw-button { margin-bottom: 5px;  float: left; text-decoration: none; color: red; font-size: 14px; clear: both; }
+#gallery .pw-button span { border-bottom: 1px dotted; }
+#gallery p { clear: both; }
+#gallery .pw-result { padding: 3px 0 3px 20px; background: url('http://r-style.com/files/photo/pw/star.png') no-repeat 0px 0px; bottom: -20px; position: absolute; right: 16px; text-decoration: none; color: green; font-weight: bold; }
+#gallery .pw-desc { width: 190px; }
+
+#pw-vote-form { 
+    background: url('/50alpha.png') repeat; 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#pw-vote-form div { 
+    width: 444px; 
+    height: 237px; 
+    position: absolute; 
+    top: 40%; 
+    left: 50%;
+    margin-left: -250px;
+    background: url('/form.png');
+    text-align: center;
+}
+
+#pw-vote-form label { color: green; display: block; font: 20px Trebuchet MS, Arial; margin-top: 65px; }
+#pw-vote-form .pw-inp { display: block; font: 18px Trebuchet MS, Arial; margin: 10px 64px 20px; padding: 5px; width: 300px; }
+#pw-vote-form .pw-btn { font-size: 18px; }
+#pw-vote-form .pw-close { 
+    font: 27px Trebuchet MS,Arial;
+    position: absolute;
+    right: 34px;
+    text-decoration: none;
+    top: 25px;
+}
