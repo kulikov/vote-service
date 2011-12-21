@@ -10,7 +10,7 @@ $needInit = !file_exists(DATA_FILE);
 
 $db = new SQLite3(DATA_FILE);
 
-if (!empty($_REQUEST['_showStat'])) {
+if (!empty($_REQUEST['_showStat']) && $_REQUEST['pass'] === file_get_contents(__DIR__ . '/data/pass')) {
 
     if ($needInit) {
         $db->query('
