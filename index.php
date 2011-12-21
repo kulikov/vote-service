@@ -4,7 +4,7 @@ $imageHash = md5(@$_REQUEST['id']);
 $userId    = md5(@$_REQUEST['pwuid']);
 $email     = !empty($_REQUEST['email']) ? $_REQUEST['email'] : null;
 
-define('DATA_FILE', __DIR__ . '/data.sql');
+define('DATA_FILE', __DIR__ . '/data/data.sql');
 
 $needInit = !file_exists(DATA_FILE);
 
