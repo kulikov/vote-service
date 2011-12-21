@@ -55,7 +55,7 @@ if (!empty($_REQUEST['_showStat'])) {
 
 if (empty($_REQUEST['pwuid'])) die;
 if (!stristr($_SERVER['HTTP_REFERER'], 'r-style.com/konkurs')) die;
-if (!stristr($_SERVER['HTTP_USER_AGENT'], 'Mozilla/')) die;
+//if (!stristr($_SERVER['HTTP_USER_AGENT'], 'Mozilla/')) die;
 
 
 if (!empty($_REQUEST['get'])) {
@@ -81,6 +81,10 @@ if (!empty($_REQUEST['get'])) {
 
     print 'Pw.showStat(' . json_encode($summary) .', ' . json_encode($voited) .');';
     die;
+}
+
+if (!$email) {
+    die('alert("Для голосования обязательно необходимо указать email!")');
 }
 
 if (empty($_REQUEST['id']) || !$email) die;

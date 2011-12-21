@@ -12,7 +12,7 @@ Pw =
     vote: function(button)
     {
         if (!$('#pw-vote-form').size()) {
-            $('body').append('<div id="pw-vote-form"><div><a href="#" class="pw-close" onclick="$(\'#pw-vote-form\').hide(); return false;">&times;</a><label>Введите ваш email:<input class="pw-inp" value="'+ (Pw._getCookie('pwemail') || '') +'" type="text"/></label><input class="pw-btn" value="Голосовать" onclick="Pw.sendVote($(this).attr(\'img\'), $(this).prev().find(\'input\').val()); " type="button"></div></div>');
+            $('body').append('<div id="pw-vote-form"><div><a href="#" class="pw-close" onclick="$(\'#pw-vote-form\').hide(); return false;">&times;</a><label>Введите ваш E-mail:<input class="pw-inp" value="'+ (Pw._getCookie('pwemail') || '') +'" type="text"/></label><input class="pw-btn" value="Голосовать" onclick="Pw.sendVote($(this).attr(\'img\'), $(this).prev().find(\'input\').val()); " type="button"></div></div>');
         }
         
         $('#pw-vote-form').show();
@@ -21,6 +21,11 @@ Pw =
     
     sendVote: function(imageId, email)
     {
+        if (!email) {
+            alert('Для голосования обязательно необходимо указать E-mail!');
+            return;
+        }
+        
         Pw._setCookie('pwemail', email);
         
         $.ajax({
